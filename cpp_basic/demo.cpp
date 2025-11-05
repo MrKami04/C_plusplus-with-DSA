@@ -1,14 +1,15 @@
 // The main difference between C and C++ is that C++ supports classes and objects, while C does not.
 #include <iostream>
 #include <string>
+#include <cmath>
 using  namespace std;
 
 int main() {
 
-     #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
+    //  #ifndef ONLINE_JUDGE
+    //     freopen("input.txt", "r", stdin);
+    //     freopen("output.txt", "w", stdout);
+    // #endif
 
 
     cout<<"Hello World!"<<endl;
@@ -103,5 +104,120 @@ int main() {
     cout << "var1: " << var1 << ", var2: " << var2 << endl;
 
     // start operators
+    // arithmetic operators (+, -, *, /, %, ++, --)
+    int A = 15, B = 4;
+    cout << "A + B = " << A + B << endl;
+    cout << "A - B = " << A - B << endl;
+    cout << "A * B = " << A * B << endl;
+    cout << "A / B = " << A / B << endl;
+    cout << "A % B = " << A % B << endl;
+    cout << "++A = " << ++A << endl;
+    cout << "--B = " << --B << endl;
+
+    // assignment operators (=, +=, -=, *=, /=, %=)
+    int C = 10;
+    C += 5;  // C = C + 5
+    cout << "C = " << C << endl;
+
+    // comparison operators (==, !=, >, <, >=, <=)
+    int D = 20, E = 15;
+    cout << "D == E: " << (D == E) << endl;
+    cout << "D != E: " << (D != E) << endl;
+    cout << "D > E: " << (D > E) << endl;
+    cout << "D < E: " << (D < E) << endl;
+    cout << "D >= E: " << (D >= E) << endl;
+    cout << "D <= E: " << (D <= E) << endl;
+
+    // logical operators (&&, ||, !)
+    bool X = true, Y = false;
+    cout << "(X && Y): " << (X && Y) << endl;
+    cout << "(X || Y): " << (X || Y) << endl;
+    cout << "(!X): " << (!X) << endl;
+
+    // precedence of operators
+    int result = 10 + 5 * 2; // multiplication has higher precedence than addition
+    cout << "Result: " << result << endl;
+
+
+    // string concatenation
+    string str1 = "Hello, ";
+    string str2 = "World!";
+    string resultStr = str1 + str2;
+    cout << "Concatenated String: " << resultStr << endl;
+    // append()
+    str1.append("C++ is fun.");
+    cout << "Appended String: " << str1 << endl;
+    // number and string concatenation
+    int number = 2024;
+    string yearStr = "Year: " + to_string(number);
+    cout << yearStr << endl;
+    // length()
+    cout << "Length of resultStr: " << resultStr.length() << endl;      
+    // size()
+    cout << "Size of resultStr: " << resultStr.size() << endl;
+    // accessing string characters
+    cout << "First character of resultStr: " << resultStr[0] << endl;
+    cout << "Third character of resultStr: " << resultStr.at(2) << endl;
+    // change string character
+    resultStr[7] = 'w';
+    cout << "Modified String: " << resultStr << endl;
+    // special characters in strings
+    string specialStr = "Line1\nLine2\tTabbed\\Backslash\"DoubleQuote\'SingleQuote";
+    cout << "Special Characters String: " << specialStr << endl;
+    // user input for string
+    string firstName;
+    cout << "Type your first name: ";
+    cin >> firstName; // get user input from the keyboard
+    cout << "Your name is: " << firstName << endl;
+
+// getline() to read full line including spaces
+    string fullName;
+    cout << "Type your full name: ";
+    cin.ignore(); // clear the input buffer
+    getline(cin, fullName);
+    cout << "Your name is: " << fullName << endl;
+    // C-style string
+    string greeting1 = "hello";
+    char greeting2[] = "hello";
+    cout << "C-style String: " << greeting2 << endl;
+
+    // math
+    // maximum and minimum
+    int maxVal = max(10, 20);
+    int minVal = min(10, 20);
+    cout << "Maximum Value: " << maxVal << endl;
+    cout << "Minimum Value: " << minVal << endl;
+    // sqrt, pow, round, ceil, floor, log
+    cout<<"Square Root of 16: " << sqrt(16) << endl;
+    cout<<"2 raised to the power 3: " << pow(2, 3);
+    cout<<"Round 4.6: " << round(4.6) << endl;
+    cout<<"Ceil 4.2: " << ceil(4.2) << endl;
+    cout<<"Floor 4.8: " << floor(4.8) << endl;
+    cout<<"Logarithm of 10: " << log(10) << endl;
+
+    // boolean values
+    bool isTrue = true;
+    bool isFalse = false;
+    cout << "isTrue: " << isTrue << endl;
+    cout << "isFalse: " << isFalse << endl;
+    cout<<"------------------------------"<<endl;
+    // boolalpha
+    cout << boolalpha; // to print boolean values as true/false
+    cout << "isTrue: " << isTrue << endl;
+    cout << "isFalse: " << isFalse << endl;
+    cout<<"------------------------------"<<endl;
+    // Resetting Back With noboolalpha
+    cout << noboolalpha;
+    cout << "isTrue: " << isTrue << endl;
+    cout << "isFalse: " << isFalse << endl;
+
+    cout<<"------------------------------"<<endl;
+    // boolean expressions
+    int val1 = 10, val2 = 20;
+    cout << "val1 == val2: " << (val1 == val2) << endl;
+    cout << "val1 != val2: " << (val1 != val2) << endl;
+    cout << "val1 > val2: " << (val1 > val2) << endl;
+    // start if-else
+
     return 0;
 }
