@@ -7,11 +7,7 @@ int main() {
         freopen("output.txt", "w", stdout);
     #endif
 
-    int a, b;
-    cin >> a >> b;
-    cout << a + b << endl;
-    cout << a * b << endl;
-
-    cout << "Hello, World!" << endl;
+string language = "C++ (cplusplus)";
+cout << "I am learning " << language << " programming language." << endl;
     return 0;
 }
