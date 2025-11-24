@@ -8,6 +8,6 @@ int main() {
     #endif
 
 string language = "C++ (cplusplus)";
-cout << "I am learning " << language << " programming language." << endl;
+cout <<"I am learning"<<language <<"programming language." << endl;
     return 0;
 }
