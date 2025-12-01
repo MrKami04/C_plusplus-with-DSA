@@ -43,5 +43,29 @@ int main(){
             cout << "No, Character isn't vowel." << endl;
     }
 }
+
+
+
+// question 10:
+
+
+    char cha;
+    cout << "Enter a character: ";
+    cin >> cha;
+
+    if (cha >= 'A' && cha <= 'Z') {
+        cout << "Uppercase letter";
+    }
+    else if (cha >= 'a' && cha <= 'z') {
+        cout << "Lowercase letter";
+    }
+    else if (cha >= '0' && cha <= '9') {
+        cout << "Digit";
+    }
+    else {
+        cout << "Special character";
+    }
+
+
     return 0;
 }
